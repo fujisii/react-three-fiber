@@ -7,6 +7,7 @@ export default function Box(props: JSX.IntrinsicElements["mesh"]) {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
   useFrame((state, delta) => (mesh.current.rotation.x += 0.01));
+  useFrame((state, delta) => (mesh.current.rotation.y += 0.01));
   return (
     <mesh
       {...props}
